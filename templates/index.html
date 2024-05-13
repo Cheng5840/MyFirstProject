@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Home page!</h1>
+    <p>{{content}}</p> 
+    {%for i in content%}
+        <p>{{i}}</p>  <!--放在兩個大括號內的 會被視為var-->  
+    {% endfor %}
+
+    {% if randomVar | length > 3%}  <!--len(var) is "var | length" in HTML-->
+        {%for i in range(4)%}
+            <p>{{randomVar}}</p>   
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>
